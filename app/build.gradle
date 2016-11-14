@@ -1,5 +1,28 @@
 apply plugin: 'com.android.application'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'CastorSDK'
+
+    publishedGroupId = 'com.CastorSDK.castor-sdk'
+    libraryName = 'CastorSDK'
+    artifact = 'castor-sdk'
+
+    libraryDescription = 'A SDK that allows you to sell 3D printed models directly from your app.'
+
+    siteUrl = 'http://www.3dcastor.com/'
+    gitUrl = 'https://github.com/eladsc/Android-Castor-SDK.git'
+
+    libraryVersion = '0.0.1'
+
+    developerId = 'eladsc'
+    developerName = 'Elad Schiller'
+    developerEmail = 'elad@3dcastor.com'
+
+    licenseName = 'MIT'
+    licenseUrl = 'https://opensource.org/licenses/MIT'
+    allLicenses = ["MIT"]
+}
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
@@ -27,3 +50,7 @@ dependencies {
     compile project(path: ':castorsdk')
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
 }
+
+// Place it at the end of the file
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
