@@ -1,5 +1,10 @@
 apply plugin: 'com.android.library'
 
+ext {
+    PUBLISH_GROUP_ID = 'com.castor.castorsdk'
+    PUBLISH_ARTIFACT_ID = 'castor-sdk'
+    PUBLISH_VERSION = '0.0.3'
+}
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
@@ -24,3 +29,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.0'
     compile 'com.android.support:support-v4:25.0.0'
 }
+
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
